@@ -1,16 +1,24 @@
+const path = require('path');
+const express = require('express');
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
-const routes = require('./controllers/');
+
+const app = express();
+const PORT = process.env.PORT || 3001;
+
+const sequelize = require("./config/connection");
+
+
+
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+app.use(require('./controllers/'));
 
-
-
-
-
-
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
+});
 
 
 
@@ -36,6 +44,7 @@ WHEN I visit the site for the first time
 THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
 
 First plan of action create a homepage with existing blog posts wit links for homepage dashboard and log in
+//complete except for existing blog posts
 
 first make a main.handlebar homepage and render it
 
