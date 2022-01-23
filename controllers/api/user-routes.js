@@ -85,6 +85,12 @@ router.post('/login', (req, res) => {
 });
 
 
+//Logout route
+router.post('/logout', (req, res) => {
+
+});
+
+
 
 //PUT /api/users/1
 router.put('/:id', (req, res) => {
@@ -125,6 +131,14 @@ router.delete('/:id', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+    if (req.session.loggedIn) {
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    }
+    else {
+      res.status(404).end();
+    }
 });
 
 module.exports = router;
