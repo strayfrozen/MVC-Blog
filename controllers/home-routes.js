@@ -48,4 +48,8 @@ router.get('/login', (req, res) => {
 
 
 
+router.get('/sign-in', (req, res) => {
+  res.render('/sign-in');
+});
+
 module.exports = router;
