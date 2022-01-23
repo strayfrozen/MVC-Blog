@@ -47,6 +47,8 @@ WHEN I click on the homepage option
 THEN I am taken to the homepage
 
 // plan of attack create routes so when homepage link is clicked you are directed there
+//done playing with user post and comment going to work on login and dashboard pages instead
+
 
 
 WHEN I click on any other links in the navigation
