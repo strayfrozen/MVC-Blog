@@ -50,10 +50,13 @@ first make a main.handlebar homepage and render it
 //complete
 
 //figure out how to make blog posts study module 13
+should be able to make blog posts now routes are set up
 
 need to create the user,post, and comment models and set up sequlize
 
 start create a user model that can store information about user
+//complete
+
 retrieve data from another user
 update profile data 
 and delete profile
