@@ -39,50 +39,32 @@ sequelize.sync({ force: false }).then(() => {
 
 
 
-/*GIVEN a CMS-style blog site
-WHEN I visit the site for the first time
-THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
-
-First plan of action create a homepage with existing blog posts wit links for homepage dashboard and log in
-//complete except for existing blog posts
-
-first make a main.handlebar homepage and render it
-//complete
-
-//figure out how to make blog posts study module 13
-should be able to make blog posts now routes are set up
-
-need to create the user,post, and comment models and set up sequlize
-
-start create a user model that can store information about user
-//complete
-
-retrieve data from another user
-update profile data 
-and delete profile
 
 
+/*
 
 WHEN I click on the homepage option
 THEN I am taken to the homepage
 
-//not sure module 14 goes more into deatil on comments and user going to study 13
+// plan of attack create routes so when homepage link is clicked you are directed there
 
 
 WHEN I click on any other links in the navigation
 THEN I am prompted to either sign up or sign in
 
 //create a login page first
+//then study module 14
 
 WHEN I choose to sign up
 THEN I am prompted to create a username and password
 
-//13 and 14
+//create login page
+//study module 14 more
 
 WHEN I click on the sign-up button
 THEN my user credentials are saved and I am logged into the site
 
-//13 and 14
+//study 14 more
 
 WHEN I revisit the site at a later time and choose to sign in
 THEN I am prompted to enter my username and password
