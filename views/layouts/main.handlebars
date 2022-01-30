@@ -4,29 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MVC-Blog</title>
-  <link rel="stylesheet" href="public\stylesheets\style.css">
+  <title>PawParrazi</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
   <div class="wrapper">
     <header>
+      <h1>
+        <a href="/">MVC</a>
+      </h1>
       <nav>
-        <a href="/homepage">Home page</a>
-        <a href="/dashboard">Dashboard</a>
-        <a href="/login">Login</a>
+        {{#if loggedIn}}
+        <a href="/dashboard">dashboard</a>
         <button id="logout" class="btn-no-style">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
       </nav>
-      <h1>MVC-Blog</h1>
     </header>
     <main>
-      <!-- This will be where the comment data is sent -->
-     {{{ body }}}
+      {{{ body }}}
     </main>
     <footer>
+      Thanks for visiting!
     </footer>
   </div>
-<script src="/javascript/logout.js"></script>
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>
